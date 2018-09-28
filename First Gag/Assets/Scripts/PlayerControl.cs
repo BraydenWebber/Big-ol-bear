@@ -4,82 +4,73 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-
-    // Player Movement Variables
-    public float MoveSpeed;
-    public float JumpHeight;
+    //Player movement variables
+    public float moveSpeed;
+    public float jumpHeight;
     private bool doubleJump;
 
     //Player grounded variables
     public Transform groundCheck;
     public float groundCheckRadius;
-    public LayerMask whatIsGround;
+    public LayerMask whatisGround;
     private bool grounded;
 
-    // //Non-Stick Player
+    //Non-Slide Player
     private float moveVelocity;
 
+	//Use this for initialization
+	private void Start()
+	{
+		 
+	}
 
-    // Use this for initialization
-    void Start()
+    void FixedUpdate()
     {
-
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatisGround);
     }
 
-
-    private void FixedUpdate()
-    {
-
-        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        //This code makes the charecter jump
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
-        {
+	// Update is called once per frame
+	private void Update()
+	{
+		 //This code makes the charecter jump
+        if(Input.GetKeyDown (KeyCode.Space)&& grounded){
             Jump();
         }
 
-        // Duoble jump code
-        if(grounded)
+
+        //Double jump code
+        if (grounded)
             doubleJump = false;
 
-        if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded)
-        {
+        if(Input.GetKeyDown (KeyCode.Space)&& !doubleJump && !grounded){
             Jump();
             doubleJump = true;
+
         }
 
-
-
-        //Non-Stick Player
+        //Non-Slide Player
         moveVelocity = 0f;
 
-        // This code maks the character move from side to side using the A&D keys
-        if (Input.GetKey(KeyCode.D))
-        {
-            //GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-            moveVelocity = MoveSpeed;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            //GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-            moveVelocity = -MoveSpeed;
+        //This code makes the character move from side to side using the A&D keys
+        if(Input.GetKey (KeyCode.D)){
+            //GetComponenet<Rigidbody2D>().velocity = new Vector(moveSpeed, GetComponent<RigidBody2D>().velocity
+            moveVelocity = moveSpeed;
 
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+        }
+        if(Input.GetKey (KeyCode.A)){
+            //GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity
+            moveVelocity = -moveSpeed;
+
         }
 
-        public void Jump()
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
-        }
+        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
 
+	}
 
-
-
+    public void Jump(){
+        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
     }
+
+
 
 }
