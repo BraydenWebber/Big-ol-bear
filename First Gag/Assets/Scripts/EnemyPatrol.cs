@@ -27,30 +27,26 @@ public class EnemyPatrol : MonoBehaviour
     public Transform EdgeCheck;
 
     //Update is called once per frame
-
-    private void Update()
+    void Update()
     {
         NotAtEdge = Physics2D.OverlapCircle(EdgeCheck.position, WallCheckRadius, WhatIsWall);
 
         HittingWall = Physics2D.OverlapCircle(WallCheck.position, WallCheckRadius, WhatIsWall);
 
         if (HittingWall || !NotAtEdge)
-            MoveRight = !MoveRight;
         {
+            MoveRight = !MoveRight;
+        }
 
-
-            if (MoveRight)
-            {
-                transform.localScale = new Vector3(-6f, 6f, 6f);
-                GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-            }
-
-            else
-            {
-                transform.localScale = new Vector3(6f, 6f, 6f);
-                GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-            }
-
+        if (MoveRight)
+        {
+            transform.localScale = new Vector3(-6f, 6f, 1f);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        }
+        else
+        {
+            transform.localScale = new Vector3(6f, 6f, 1f);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
     }
 }
