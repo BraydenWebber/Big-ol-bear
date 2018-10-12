@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatol : MonoBehaviour
+public class EnemyPatrol : MonoBehaviour
 {
 
     // Movement Variables

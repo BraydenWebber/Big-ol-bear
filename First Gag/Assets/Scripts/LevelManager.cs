@@ -20,22 +20,42 @@ public class LevelManager : MonoBehaviour {
     //Store Gravity Value
     private float GravitySore;
 
-	//Use this for initilization
-	void Start()
+	// Use this for initilization
+	private void Start()
 	{
-        PC = FindObjectOfType<Rigidbody2D>();
+        //PC = FindObjectOfType<Rigidbody2D> ();
 	}
 
     public void RespawnPlayer(){
         StartCoroutine("RespawnPlayerCo");
-        
     }
 
-    public IEnumerator RespawnPlayerCo(){
-        //Generate Death Particle 
+    public IEnumerator RespawnPlayerCo()
+    {
+        //Generate Death Paritcle
         Instantiate(DeathParticle, PC.transform.position, PC.transform.rotation);
         //Hide PC
-        //PC.enabled = false
-        PC.GetComponent<Renderer> ().enabled
+        //PC enabled = false;
+        PC.GetComponent<Renderer>().enabled = false;
+        //Gravity Reset
+        GravitySore = PC.GetComponent<Rigidbody2D>().gravityScale;
+        PC.GetComponent<Rigidbody2D>().gravityScale = 0f;
+        PC.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        // Point penalty
+        ScoreManager.AddPoints(-PointPenaltyOnDeath);
+        //Debug Message
+        Debug.Log("PC Respawn");
+        // Respawn Delay
+        yield return new WaitForSeconds(RespawnDelay);
+        //Gravity Restore
+        PC.GetComponent<Rigidbody2D>().gravityScale = GravitySore;
+        //Match PC's transform position
+        PC.transform.position = CurrentCheckPoint.transform.position;
+        //Show PC
+        //PC.enabled = true
+        PC.GetComponent<Renderer>().enabled = true;
+        //Spawn PC
+        Instantiate(RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
+
     }
 }
