@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
 
     public GameObject CurrentCheckPoint;
-    private Rigidbody2D PC;
+    public Rigidbody2D PC;
 
     //Particles
     public GameObject DeathParticle;

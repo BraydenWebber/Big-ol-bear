@@ -309,7 +309,7 @@ ParticleSystem:
   lengthInSec: 1
   simulationSpeed: 2
   stopAction: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4914,7 +4914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 10
   Player: {fileID: 1107777259}
-  EnemyDeath: {fileID: 0}
+  EnemyDeath: {fileID: 220414603}
   ProjectileParticle: {fileID: 0}
   PointsForKill: 10
 --- !u!1 &299513189 stripped
@@ -5142,7 +5142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -677, y: 355}
+  m_AnchoredPosition: {x: -496, y: 292}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528874192
@@ -5440,7 +5440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ce94ddf34de407ba79c1ae4f5661cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 10
   jumpHeight: 5
   groundCheck: {fileID: 1767779410}
   groundCheckRadius: 0.5
@@ -5459,7 +5459,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentCheckPoint: {fileID: 300996701}
-  DeathParticle: {fileID: 1942527478}
+  PC: {fileID: 1107777259}
+  DeathParticle: {fileID: 220414603}
   RespawnParticle: {fileID: 1942527478}
   RespawnDelay: 1
   PointPenaltyOnDeath: 10
@@ -5475,7 +5476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 1559826739}
-  projectile: {fileID: 293941094}
+  Projectile: {fileID: 293941094}
 --- !u!1001 &1496795438
 Prefab:
   m_ObjectHideFlags: 0
@@ -5533,8 +5534,7 @@ Prefab:
     - target: {fileID: 1890105278410014, guid: 6672ca1446e5a446b9cfc4bd5cdd05fd, type: 2}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     - target: {fileID: 4385381931174972, guid: 6672ca1446e5a446b9cfc4bd5cdd05fd, type: 2}
       propertyPath: m_LocalPosition.y
       value: -0.095
@@ -5662,7 +5662,7 @@ GameObject:
   m_Layer: 0
   m_Name: WallCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5712,7 +5712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -635, y: 355}
+  m_AnchoredPosition: {x: -453, y: 292}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664140346
@@ -6017,7 +6017,7 @@ ParticleSystem:
   lengthInSec: 1
   simulationSpeed: 2
   stopAction: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
