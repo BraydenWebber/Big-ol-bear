@@ -1,14 +1,17 @@
 ﻿<Properties StartupConfiguration="{6216E8D9-86F8-246B-DF5C-CFCE8E02AB13}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/KillPlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Fakeeasydeathfloor.cs">
     <Files>
       <File FileName="Assets/Scripts/EnemyPatrol.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Projectile.cs" Line="37" Column="1" />
+      <File FileName="Assets/Scripts/Projectile.cs" Line="37" Column="6" />
       <File FileName="Assets/Scripts/PlayerShoot.cs" Line="15" Column="2" />
       <File FileName="Assets/Scripts/LevelManager.cs" Line="21" Column="31" />
-      <File FileName="Assets/Scripts/DeathBox.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DeathBox.cs" Line="12" Column="13" />
       <File FileName="Assets/Scripts/PlayerControl.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/KillPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ScoreManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Checkpoint.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Fakeeasydeathfloor.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
