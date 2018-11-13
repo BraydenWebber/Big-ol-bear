@@ -6,7 +6,8 @@ public class Projectile : MonoBehaviour
 {
 
     public float Speed;
-    public Rigidbody2D PC;
+    public float TimeOut;
+    public GameObject PC;
 
     public GameObject EnemyDeath;
 
@@ -17,9 +18,17 @@ public class Projectile : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        PC = GameObject.Find("PC");
+
+        EnemyDeath = Resources.Load("Prefabs/Death_PS") as GameObject;
+        ProjectileParticle = Resources.Load("Prefabs/Respawn_PS") as GameObject;
 
         if (PC.transform.localScale.x < 0)
             Speed = -Speed;
+
+
+        // Destroys Projectile after X sseconds
+        Destroy(gameObject, TimeOut);
 
         // Speed = Speed * Mathf.Sign(PC.transform.localScale.x);
 
