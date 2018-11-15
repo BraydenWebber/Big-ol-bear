@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4890918431094166}
   - component: {fileID: 212262020217037148}
   - component: {fileID: 58729903200296578}
+  - component: {fileID: 50921137881363476}
+  - component: {fileID: 114298891319683614}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -35,12 +37,32 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858878473132376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.618, y: -1.011, z: 0}
+  m_LocalPosition: {x: -16.8, y: -31.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50921137881363476
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858878473132376}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 1
 --- !u!58 &58729903200296578
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -56,6 +78,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &114298891319683614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858878473132376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532801db1b960406f8691b2a93dfa845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 10
+  TimeOut: 0
+  PC: {fileID: 0}
+  EnemyDeath: {fileID: 0}
+  ProjectileParticle: {fileID: 0}
+  PointsForKill: 10
 --- !u!212 &212262020217037148
 SpriteRenderer:
   m_ObjectHideFlags: 1
