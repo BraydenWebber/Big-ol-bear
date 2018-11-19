@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858878473132376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.8, y: -31.35, z: 0}
+  m_LocalPosition: {x: -32.5, y: -44.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,7 +62,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 1
+  m_Constraints: 2
 --- !u!58 &58729903200296578
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -90,10 +90,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
-  TimeOut: 0
-  PC: {fileID: 0}
-  EnemyDeath: {fileID: 0}
-  ProjectileParticle: {fileID: 0}
+  TimeOut: 5
+  PC: {fileID: 1253666382784246, guid: 349e1e0587abb40798372d694129a66a, type: 2}
+  EnemyDeath: {fileID: 1041245802745834, guid: 1823735ed7ffd4dbc8e120e7fff2a21c, type: 2}
+  ProjectileParticle: {fileID: 1346135707882240, guid: 872c5ff1f679b49d980f58edf65a4c9b,
+    type: 2}
   PointsForKill: 10
 --- !u!212 &212262020217037148
 SpriteRenderer:
