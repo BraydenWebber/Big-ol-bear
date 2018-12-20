@@ -63,6 +63,6 @@ public class LevelManager : MonoBehaviour
         PC2.SetActive(true);
         PC.GetComponent<Renderer>().enabled = true;
         //Spawn PC
-        Instantiate(RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
+        Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
     }
 }
