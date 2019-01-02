@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BunnyWalk.cs">
     <Files>
-      <File FileName="Assets/Scripts/EnemyPatrol.cs" Line="44" Column="1" />
+      <File FileName="Assets/Scripts/EnemyPatrol.cs" Line="8" Column="1" />
       <File FileName="Assets/Scripts/Projectile.cs" Line="32" Column="38" />
       <File FileName="Assets/Scripts/PlayerShoot.cs" Line="23" Column="2" />
       <File FileName="Assets/Scripts/LevelManager.cs" Line="66" Column="21" />
@@ -15,7 +15,7 @@
       <File FileName="Assets/Scripts/DestroyFinishedParticle.cs" Line="25" Column="2" />
       <File FileName="Assets/Scripts/CoinPickup.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/MainMenu.cs" Line="9" Column="6" />
-      <File FileName="Assets/Scripts/BunnyWalk.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BunnyWalk.cs" Line="51" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
